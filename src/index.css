@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  margin: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-500 dark:bg-purple-600 rounded-full hover:bg-purple-600 dark:hover:bg-purple-500;
+}
+
+/* Smooth transitions */
+button, a {
+  @apply transition-all duration-300;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-purple-500 text-white;
+}
